@@ -10,7 +10,7 @@ public class PlayerController : NetworkBehaviour
     private int initialSpeed;
     public float jumpForce;
     private float initialJumpForce;
-    private SphereCollider ballCollider;
+    private CapsuleCollider ballCollider;
     public LayerMask floorLayer;
     private bool onFloor;
 
@@ -51,10 +51,10 @@ public class PlayerController : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        ballCollider = GetComponent<SphereCollider>();
+        ballCollider = GetComponent<CapsuleCollider>();
         initialJumpForce = jumpForce;
         initialSpeed = speed;
-        initialColor = rb.gameObject.GetComponent<Renderer>().material.GetColor("Color_8AD3BAA6");
+        //initialColor = rb.gameObject.GetComponent<Renderer>().material.GetColor("Color_8AD3BAA6");
     }
 
     private void Update()

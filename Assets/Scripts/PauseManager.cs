@@ -42,7 +42,7 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void PauseResumeGame()
+    public static void PauseResumeGame()
     {
         if (PauseManager.pauseOn)
         {
