@@ -1,0 +1,6 @@
+Para manipular los gameobject con mirror:
+-Deben poseer NetworkIdentity
+-NetworkTransform
+-Un Script de control de los objetos que herede de networkBehaviour y verifique si isLocal...
+-Importante un NetWorkManager personalizado que permita iniciar el juego al verificar las conexiones(Falta, es lo necesario para probar el juego, iniciar a los jugadores, setear y desetear la pausa)
+-Luego verificar las vidas etc
