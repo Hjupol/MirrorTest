@@ -6,7 +6,7 @@ public class NetworkManagerModified : NetworkManager
 {
         public Transform leftSpawn;
         public Transform rightSpawn;
-        GameObject ball;//
+        GameObject ball;
 
         public override void OnServerAddPlayer(NetworkConnection conn)
         {
@@ -16,12 +16,16 @@ public class NetworkManagerModified : NetworkManager
 
             if (numPlayers == 2)
             {
-            PauseManager.pauseOn = true;
+                PauseManager.pauseOn = true;
+                ball = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Ball"));
+                NetworkServer.Spawn(ball);
             }
         }
 
         public override void OnServerDisconnect(NetworkConnection conn)
         {
+        if (ball != null)
+            NetworkServer.Destroy(ball);
         if (PauseManager.pauseOn == true)
             PauseManager.pauseOn = false;
 

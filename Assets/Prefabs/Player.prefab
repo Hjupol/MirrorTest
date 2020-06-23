@@ -152,8 +152,6 @@ MonoBehaviour:
   floorLayer:
     serializedVersion: 2
     m_Bits: 256
-  projectile: {fileID: 5636859963010157639, guid: 80568a37e20611145a943f0fb11eee8b,
-    type: 3}
 --- !u!54 &-503499327748695011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,7 +166,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &6160002693023119138
 CapsuleCollider:
