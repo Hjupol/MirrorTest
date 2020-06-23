@@ -148,7 +148,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   speed: 10
-  jumpForce: 20
+  jumpForce: 10
   floorLayer:
     serializedVersion: 2
     m_Bits: 256
